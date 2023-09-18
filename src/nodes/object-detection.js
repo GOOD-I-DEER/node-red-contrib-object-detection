@@ -7,6 +7,8 @@ module.exports = function (RED) {
     const sharp = require("sharp");
 
     const node = this;
+    const modelName = config.model;
+    console.log("model : ", modelName);
 
     // console.log("====================================");
     // console.log(RED);
@@ -16,8 +18,13 @@ module.exports = function (RED) {
     // console.log("====================================");
 
     node.on("input", async function (msg) {
+      console.log(modelName);
+      let start = new Date();
+
       const buf = msg.payload;
       const boxes = await detect_objects_on_image(msg, buf);
+      let end = new Date();
+      console.log(end - start, "ms");
       // node.send(boxes);
       msg.payload = boxes;
       //   console.log(boxes);
@@ -73,7 +80,7 @@ module.exports = function (RED) {
       //     "C:/Users/SSAFY/Desktop/ssdc/object/createNode/yolov8/src/nodes/yolov8m.onnx"
       //   );
       const model = await ort.InferenceSession.create(
-        "node_modules/@good-i-deer/node-red-contrib-object-detection/src/model/yolov8m.onnx"
+        `node_modules/@good-i-deer/node-red-contrib-object-detection/src/model/${modelName}.onnx`
       );
       // print("model", model);
       // print("input", input);
@@ -110,7 +117,7 @@ module.exports = function (RED) {
         const [class_id, prob] = [...Array(80).keys()] // 80개는 라벨링의 갯수 인듯
           .map((col) => [col, output[8400 * (col + 4) + index]])
           .reduce((accum, item) => (item[1] > accum[1] ? item : accum), [0, 0]);
-        if (prob < 0.5) {
+        if (prob < 0.9) {
           // 확률이 0.5이하면 무시
           continue;
         }
