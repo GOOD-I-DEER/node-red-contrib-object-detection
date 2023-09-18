@@ -1,0 +1,20 @@
+{
+  "name": "@good-i-deer/node-red-contrib-object-detection",
+  "version": "1.0.0",
+  "description": "object-detection test for node-red",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "team-good-i-deer",
+  "license": "LGPL-3.0-only",
+  "dependencies": {
+    "onnxruntime-node": "^1.14.0",
+    "sharp": "^0.32.1"
+  },
+  "node-red": {
+    "nodes": {
+      "object-detection": "./src/nodes/object-detection.js"
+    }
+  }
+}
