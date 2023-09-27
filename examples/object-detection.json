@@ -1,0 +1,85 @@
+[
+    {
+        "id": "4212d35061fe9b82",
+        "type": "debug",
+        "z": "83078a0b9760cbee",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 899.0000762939453,
+        "y": 140.00000762939453,
+        "wires": []
+    },
+    {
+        "id": "4cc9810beb057ce1",
+        "type": "good-object-detection",
+        "z": "83078a0b9760cbee",
+        "name": "",
+        "returnValue": "0",
+        "model": "yolov8n",
+        "threshold": 0.5,
+        "absolutePathDir": "",
+        "x": 709.0000762939453,
+        "y": 140.00000762939453,
+        "wires": [
+            [
+                "4212d35061fe9b82"
+            ]
+        ]
+    },
+    {
+        "id": "1f6540f5de8d8204",
+        "type": "file in",
+        "z": "83078a0b9760cbee",
+        "name": "Image Path",
+        "filename": "",
+        "filenameType": "str",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 499.0000762939453,
+        "y": 140.00000762939453,
+        "wires": [
+            [
+                "4cc9810beb057ce1"
+            ]
+        ]
+    },
+    {
+        "id": "27305ebce4a2d493",
+        "type": "inject",
+        "z": "83078a0b9760cbee",
+        "name": "Inject",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 339.0000762939453,
+        "y": 140.00000762939453,
+        "wires": [
+            [
+                "1f6540f5de8d8204"
+            ]
+        ]
+    }
+]
