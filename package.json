@@ -2,7 +2,14 @@
   "name": "@good-i-deer/node-red-contrib-object-detection",
   "version": "1.0.0",
   "description": "Object Detection Nodes for Node-RED",
-  "keywords":["node-red", "detection", "object detection", "webcam object detection"],
+  "keywords": [
+    "node-red",
+    "detection",
+    "yolo",
+    "object-detection",
+    "onnx",
+    "webcam"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
