@@ -1,31 +1,4 @@
-# @good-i-deer/node-red-contrib-object-detection
-
-[![platform](https://img.shields.io/badge/platform-Node--RED-red)](https://nodered.org)
-[![npm version](https://badge.fury.io/js/@good-i-deer%2Fnode-red-contrib-object-detection.svg)](https://badge.fury.io/js/@good-i-deer%2Fnode-red-contrib-object-detection)
-[![GitHub license](https://img.shields.io/github/license/GOOD-I-DEER/node-red-contrib-object-detection)](https://github.com/GOOD-I-DEER/node-red-contrib-object-detection/blob/main/LICENSE)
-
-Object Detection Node for Node-Red
-
-# Description
-
-This module provides a set of object recognition nodes. If you use these nodes, you can easily detect objects in the image and use our nodes with other services. You can choose an appropriate pre-trained model considering elapsed time and accuracy. And you can also cut the images you want from the original image and download them. If you want, you can easily create a service by uploading images directly, using a webcam, or inputting photos from an IoT camera.
-
-# Pre-requisites
-
-The Node-Red-Contrib-Object-Detection requires **[Node-RED](https://nodered.org/)** to be installed.
-
-# Install
-
-To use this module, you need to go to the folder where node-red is installed and use the npm install command.
-
-```bash
-cd ~/.node-red/
-npm install @good-i-deer/node-red-contrib-object-detection
-```
-
-# **Nodes**
-
-## object-detection
+# object-detection
 
 This is a node that detects and outputs objects in the image.
 
@@ -83,7 +56,6 @@ Data is output in the output format selected in the 'Return Value' property.
   <summary>Image File</summary>
   <img width="180" style="display : inline-block; margin-left: 10px;" alt="detected_object" src="https://github.com/GOOD-I-DEER/node-red-contrib-object-detection/assets/58355046/30e4f8aa-b857-4792-9032-475f4de437b7">
 </details>
-
 
 ### Examples
 
@@ -171,125 +143,6 @@ This is a simple example of this node.
 
 ---
 
-## webcam-object-detection
-
-This is a node that detects and outputs objects in images on a web browser using a webcam.
-
-### input
-
-Http request
-
-- Http Get Request to request a web page to provide object detection service using a webcam in a web browser
-
-### property
-
-![Untitled 5](https://github.com/GOOD-I-DEER/node-red-contrib-object-detection/assets/58355046/6595558b-d0c3-4355-ae74-435eca4b7b8b)
-
-Name
-
-- The name of the node displayed on the screen
-
-Model
-
-- A pre-trained model used for object detection. Supports yolov8n, yolov8s, and yolov8m models. Accuracy increases in the order n < s < m, but it also takes longer.
-
-Confidence Threshold
-
-- Confidence threshold of the results of the pre-trained model. You must specify a value between 0 and 1. The lower the value, the more objects are detected.
-
-Server Url
-
-- Server URL to be applied to CORS settings. The default is localhost.
-
-Socket Port
-
-- A socket port that transmits object detection results using a websocket. Users can specify which port they want to use among ports that are not in use. The default value is 1889.
-
-Webcam Test
-
-- You can check the user's webcam screen in advance.
-
-### output
-
-Http response
-
-- A web page to provide object detection service using webcam in web browser.
-
-Detected object
-
-- Result object of the pretrained model. A model can contain multiple objects with preset labels. Included values are x, y, w, h, prob.
-  ![Untitled 6](https://github.com/GOOD-I-DEER/node-red-contrib-object-detection/assets/58355046/986dc2a4-044d-4ad8-80b6-2147660a699e)
-
-### Examples
-
-This is a simple example of this node.
-
-![Untitled 7](https://github.com/GOOD-I-DEER/node-red-contrib-object-detection/assets/58355046/fd58dfeb-2f9b-43d0-a6eb-1ff10459fb10)
-
-### JSON
-
-```json
-[
-  {
-    "id": "f341edcf122db704",
-    "type": "http in",
-    "z": "ff67e0c22a0e9932",
-    "name": "",
-    "url": "/webcamObjectDetection",
-    "method": "get",
-    "upload": false,
-    "swaggerDoc": "",
-    "x": 180,
-    "y": 720,
-    "wires": [["7c36ca24529c9981"]]
-  },
-  {
-    "id": "8a1974a686e2ba92",
-    "type": "http response",
-    "z": "ff67e0c22a0e9932",
-    "name": "",
-    "statusCode": "",
-    "headers": {},
-    "x": 710,
-    "y": 700,
-    "wires": []
-  },
-  {
-    "id": "14fad81fd8ec7ff6",
-    "type": "debug",
-    "z": "ff67e0c22a0e9932",
-    "name": "Object detection result",
-    "active": true,
-    "tosidebar": true,
-    "console": false,
-    "tostatus": false,
-    "complete": "true",
-    "targetType": "full",
-    "statusVal": "",
-    "statusType": "auto",
-    "x": 760,
-    "y": 760,
-    "wires": []
-  },
-  {
-    "id": "7c36ca24529c9981",
-    "type": "webcam-object-detection",
-    "z": "ff67e0c22a0e9932",
-    "name": "",
-    "model": "yolov8n",
-    "threshold": 0.5,
-    "serverUrl": "localhost",
-    "socketUrl": "http://localhost",
-    "socketPort": "1889",
-    "x": 470,
-    "y": 720,
-    "wires": [["8a1974a686e2ba92"], ["14fad81fd8ec7ff6"]]
-  }
-]
-```
-
----
-
 ## **Discussions and suggestions**
 
 Use **[GitHub Issues](https://github.com/GOOD-I-DEER/node-red-contrib-face-vectorization/issues)** to ask questions or to discuss new features.
@@ -322,13 +175,3 @@ Copyright Samsung Automation Studio Team under the **[GNU General Public License
 - [Ultralytics YOLOv8](https://docs.ultralytics.com/)
 - [yolov8 onnx on javascript](https://github.com/AndreyGermanov/yolov8_onnx_javascript)
 - [yolov8 onnx on nodejs](https://github.com/AndreyGermanov/yolov8_onnx_nodejs)
-
----
-
-### **Keywords**
-
-- **[node-red](https://www.npmjs.com/search?q=keywords:node-red)**
-- [**Object-detection**](https://www.npmjs.com/search?q=keywords%3AObject-detection)
-- [**yolo**](https://www.npmjs.com/search?q=keywords%3Ayolo)
-- **[onnx](https://www.npmjs.com/search?q=keywords%3Aonnx)**
-- [**webcam**](https://www.npmjs.com/search?q=keywords%3Awebcam)
