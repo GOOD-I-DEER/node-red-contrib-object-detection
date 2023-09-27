@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "team-good-i-deer",
+  "author": "GOOD-I-DEER",
   "license": "LGPL-3.0-only",
   "repository": {
     "type": "git",
@@ -20,6 +20,10 @@
     "serve-static": "^1.15.0",
     "path": "^0.12.7"
   },
+  "bugs": {
+    "url": "https://github.com/GOOD-I-DEER/node-red-contrib-object-detection/issues"
+  },
+  "homepage": "https://github.com/GOOD-I-DEER/node-red-contrib-object-detection#readme",
   "node-red": {
     "nodes": {
       "GoodObjectDetection": "object-detection-node/object-detection.js",
