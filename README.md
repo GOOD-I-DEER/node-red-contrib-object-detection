@@ -315,7 +315,7 @@ Copyright Samsung Automation Studio Team under the **[GNU General Public License
 ### **Keywords**
 
 - **[node-red](https://www.npmjs.com/search?q=keywords:node-red)**
-- [**Object-detection**](https://www.npmjs.com/search?q=keywords%3AObject-detection)
+- [**object-detection**](https://www.npmjs.com/search?q=keywords%3AObject-detection)
 - [**yolo**](https://www.npmjs.com/search?q=keywords%3Ayolo)
 - **[onnx](https://www.npmjs.com/search?q=keywords%3Aonnx)**
 - [**webcam**](https://www.npmjs.com/search?q=keywords%3Awebcam)
