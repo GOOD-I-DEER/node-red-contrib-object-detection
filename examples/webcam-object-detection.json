@@ -1,0 +1,68 @@
+[
+    {
+        "id": "f341edcf122db704",
+        "type": "http in",
+        "z": "ff67e0c22a0e9932",
+        "name": "",
+        "url": "/webcamObjectDetection",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 720,
+        "wires": [
+            [
+                "7c36ca24529c9981"
+            ]
+        ]
+    },
+    {
+        "id": "8a1974a686e2ba92",
+        "type": "http response",
+        "z": "ff67e0c22a0e9932",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 710,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "14fad81fd8ec7ff6",
+        "type": "debug",
+        "z": "ff67e0c22a0e9932",
+        "name": "Object detection result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "7c36ca24529c9981",
+        "type": "webcam-object-detection",
+        "z": "ff67e0c22a0e9932",
+        "name": "",
+        "model": "yolov8n",
+        "threshold": 0.5,
+        "serverUrl": "localhost",
+        "socketUrl": "http://localhost",
+        "socketPort": "1889",
+        "x": 470,
+        "y": 720,
+        "wires": [
+            [
+                "8a1974a686e2ba92"
+            ],
+            [
+                "14fad81fd8ec7ff6"
+            ]
+        ]
+    }
+]
