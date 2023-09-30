@@ -14,7 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "GOOD-I-DEER",
-  "license": "LGPL-3.0-only",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/GOOD-I-DEER/node-red-contrib-object-detection"
