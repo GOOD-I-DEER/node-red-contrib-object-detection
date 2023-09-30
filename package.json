@@ -1,6 +1,6 @@
 {
   "name": "@good-i-deer/node-red-contrib-object-detection",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Object Detection Nodes for Node-RED",
   "keywords": [
     "node-red",
