@@ -84,7 +84,6 @@ Data is output in the output format selected in the 'Return Value' property.
   <img width="180" style="display : inline-block; margin-left: 10px;" alt="detected_object" src="https://github.com/GOOD-I-DEER/node-red-contrib-object-detection/assets/58355046/30e4f8aa-b857-4792-9032-475f4de437b7">
 </details>
 
-
 ### Examples
 
 This is a simple example of this node.
@@ -168,8 +167,6 @@ This is a simple example of this node.
   }
 ]
 ```
-
----
 
 ## webcam-object-detection
 
@@ -288,13 +285,9 @@ This is a simple example of this node.
 ]
 ```
 
----
-
 ## **Discussions and suggestions**
 
 Use **[GitHub Issues](https://github.com/GOOD-I-DEER/node-red-contrib-face-vectorization/issues)** to ask questions or to discuss new features.
-
----
 
 ## **Authors**
 
@@ -307,13 +300,9 @@ Use **[GitHub Issues](https://github.com/GOOD-I-DEER/node-red-contrib-face-vect
 - [Lee Hyo Sik](https://github.com/hy06ix)
 - [Jung Gyu Sung](https://github.com/ramaking)
 
----
-
 ## **Copyright and license**
 
 Copyright Samsung Automation Studio Team under the **[GNU General Public License v3.0 license](https://www.gnu.org/licenses/gpl-3.0.html)**.
-
----
 
 ## **Reference**
 
@@ -322,13 +311,3 @@ Copyright Samsung Automation Studio Team under the **[GNU General Public License
 - [Ultralytics YOLOv8](https://docs.ultralytics.com/)
 - [yolov8 onnx on javascript](https://github.com/AndreyGermanov/yolov8_onnx_javascript)
 - [yolov8 onnx on nodejs](https://github.com/AndreyGermanov/yolov8_onnx_nodejs)
-
----
-
-### **Keywords**
-
-- **[node-red](https://www.npmjs.com/search?q=keywords:node-red)**
-- [**Object-detection**](https://www.npmjs.com/search?q=keywords%3AObject-detection)
-- [**yolo**](https://www.npmjs.com/search?q=keywords%3Ayolo)
-- **[onnx](https://www.npmjs.com/search?q=keywords%3Aonnx)**
-- [**webcam**](https://www.npmjs.com/search?q=keywords%3Awebcam)
